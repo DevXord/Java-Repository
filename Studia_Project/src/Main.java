@@ -3,13 +3,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
 
         /* ćw.5 */
 
         /* zad.1 podziel swój wiek przez modulo 3 i jeśli twój wiek zwraca 0 wyświetl napis "Podzielny przez 3",
          * w innym wypadku "Niepodzielny przez 3" użyj kontrukcji if else
-         *
+         **/
+        Scanner sc = new Scanner(System.in);
         System.out.println("Podaj wiek: ");
         int age = sc.nextInt();
 
@@ -20,7 +21,7 @@ public class Main {
             System.out.println("Wiek nie jest podzielny przez 3");
 
 
-        /* zad.2 użyj parametru trójargumentowego aby sprawdzić parzystośc nr. indeksu
+        /* zad.2 użyj parametru trójargumentowego aby sprawdzić parzystośc nr. indeksu*/
 
         System.out.println("Podaj numer indeksu: ");
         int indexNumber = sc.nextInt();
