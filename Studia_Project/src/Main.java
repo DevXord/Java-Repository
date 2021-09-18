@@ -1,66 +1,49 @@
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        /* ćw.4 */
+        Scanner sc = new Scanner(System.in);
 
-        /* zad.1 proszę dodać kilka złożonych operacji uzywając kilku operatorów arytmetycznych i logicznych */
+        /* ćw.5 */
 
-        int x = 5,y = 0,z = 0;
-        Random rand = new Random();
-
-        x += 5;
-        System.out.println("x + 5 = "+ x);
-        x -= 2;
-        System.out.println("x - 2 = "+ x);
-        x /= 2;
-        System.out.println("x / 2 = "+ x);
-        x %= 2;
-        System.out.println("x % 2 = "+ x);
-        System.out.println("//////////////////////////////////////////");
+        /* zad.1 podziel swój wiek przez modulo 3 i jeśli twój wiek zwraca 0 wyświetl napis "Podzielny przez 3",
+         * w innym wypadku "Niepodzielny przez 3" użyj kontrukcji if else
+         *
+        System.out.println("Podaj wiek: ");
+        int age = sc.nextInt();
 
 
-        x = 2;
-        y = x++;
-        System.out.println("y = "+y);
-        x = 2;
-        y = ++x;
-        System.out.println("y = "+y);
-        System.out.println("//////////////////////////////////////////");
+        if(age % 3 == 0)
+            System.out.println("Wiek jest podzielny przez 3");
+        else
+            System.out.println("Wiek nie jest podzielny przez 3");
+
+
+        /* zad.2 użyj parametru trójargumentowego aby sprawdzić parzystośc nr. indeksu
+
+        System.out.println("Podaj numer indeksu: ");
+        int indexNumber = sc.nextInt();
+        System.out.printf("Numer indeksu jest %s\n", (indexNumber % 2 == 0) ? "parzysty" : "nieparzysty");
 
 
 
-        x = rand.nextInt(3);
+        /* zad.3 wpisz z klawiatury liczbę zmiennoprzecinkową (użyj klasy Scanner z poprzednich ćwiczeń)
+         * i stwórz konstrukcję else if z dowolnymi komunikatami */
 
-        System.out.println("Random x = " + (x));
-        System.out.println("x == 2 = " + (x == 2));
-        System.out.println("x != 2 = " + (x != 2));
-        System.out.println("x >= 2 = " + (x >= 2));
-        System.out.println("x <= 2 = " + (x <= 2));
-        System.out.println("x < 2 = " + (x < 2));
-        System.out.println("x > 2 = " + (x > 2));
-        System.out.println("//////////////////////////////////////////");
-        x = rand.nextInt(5);
-        y = rand.nextInt(4);
-        z = rand.nextInt(2);
-        System.out.printf("Random x = %d  Random y = %d  Random z = %d\n",x,y,z);
-        System.out.println("x == y || y >= z  = " + (x == y || y >= z));
-        System.out.println("x <= z || y >= z  = " + (x <= z || y >= z));
-        System.out.println("x != z || y != z  = " + (x != z || y != z));
-        System.out.println("x != z || y == z  = " + (x != z || y == z));
-        System.out.println("x != z || y == z  && x != z = " + (x != z || y == z && x != z));
-        System.out.println("x != z || y == z  && x == z = " + (x != z || y == z && x == z));
-        System.out.println("x != z || y == z  && x <= z = " + (x != z || y == z && x <= z));
-        System.out.println("x != z || y == z  && x >= z = " + (x != z || y == z && x >= z));
-        System.out.println("x != z || y == z  && x >= z && y == z = " + (x != z || y == z && x >= z && y == z));
-        System.out.println("x != z || y == z  && x >= z && y != z = " + (x != z || y == z && x >= z && y != z));
-        System.out.println("x != z || y == z  && x != z && y != z = " + (x != z || y == z && x != z && y != z));
-        System.out.println("(x != z || y == z)  && x >= z && y == z = " + ((x != z || y == z) && x >= z && y == z));
-        System.out.println("(x != z || y == z)  && x >= z && y != z = " + ((x != z || y == z) && x >= z && y != z));
-        System.out.println("(x != z || y == z)  && x != z && y != z = " + ((x != z || y == z) && x != z && y != z));
+        System.out.println("Podaj liczbę zmiennoprzecinkową: ");
+        float fl = sc.nextFloat();
 
+        if(fl < 0.50)
+            System.out.printf("Liczba %f jest mniejsza od 0.50\n",fl);
+        else if(fl == 0.50)
+            System.out.printf("Liczba %f jest równa 0.50\n",fl);
+        else if(fl > 0.50 && fl < 1.00)
+            System.out.printf("Liczba %f jest wieksza od 0.50 ale mniejsza od 1.00\n",fl);
+        else if(fl == 1.00)
+            System.out.printf("Liczba %f jest równa 1.00\n",fl);
+        else
+            System.out.printf("Liczba %f jest wieksza od 1.00\n",fl);
 
     }
 
