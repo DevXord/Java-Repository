@@ -1,41 +1,65 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        /* ćw.3 */
+        /* ćw.4 */
 
-        /*  zad.1 napisać interfejs który bedzie słuzył do wpisania danych osobowych:
-         *   a) Imię, nazwisko, wiek, nr indeksu,
-         *   dane mają być wprowadzane z klawiatury w konsoli
-         *   b) wyświetlić dane za pomocą println i printf
-         */
-        //a
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Podaj swoje imie: ");
-        String name = sc.nextLine();
-        System.out.println("Podaj swoje nazwisko: ");
-        String surName = sc.nextLine();
-        System.out.println("Podaj swój wiek: ");
-        int age = sc.nextInt();
-        System.out.println("Podaj swój numer indeksu: ");
-        int indexNumber = sc.nextInt();
-        //b
-        System.out.println("Imie: "+name+", Nazwisko: "+surName+", Wiek: "+age+", Numer indeksu: " +indexNumber);
-        System.out.printf("Imie: %s, Nazwisko: %s, Wiek: %d, Numer indeksu: %d",name,surName,age,indexNumber);
+        /* zad.1 proszę dodać kilka złożonych operacji uzywając kilku operatorów arytmetycznych i logicznych */
+
+        int x = 5,y = 0,z = 0;
+        Random rand = new Random();
+
+        x += 5;
+        System.out.println("x + 5 = "+ x);
+        x -= 2;
+        System.out.println("x - 2 = "+ x);
+        x /= 2;
+        System.out.println("x / 2 = "+ x);
+        x %= 2;
+        System.out.println("x % 2 = "+ x);
+        System.out.println("//////////////////////////////////////////");
 
 
+        x = 2;
+        y = x++;
+        System.out.println("y = "+y);
+        x = 2;
+        y = ++x;
+        System.out.println("y = "+y);
+        System.out.println("//////////////////////////////////////////");
 
-        /*  zad.2 zadeklarować 2 zmienne typu int i wykonać na nich obliczenia arytmetyczn (+, -, *, /, %)
-         *   wynik wyświetlić w konsoli programu
-         */
-        int x = 10,y = 5;
-        System.out.println("Dodawanie: " +(x + y));
-        System.out.println("Odejmowanie: "+(x - y));
-        System.out.println("Mnożenie: "+(x * y));
-        System.out.println("Dzielenie: " +(x / y));
-        System.out.println("Reszta z dzielenia: "+(x % y));
 
+
+        x = rand.nextInt(3);
+
+        System.out.println("Random x = " + (x));
+        System.out.println("x == 2 = " + (x == 2));
+        System.out.println("x != 2 = " + (x != 2));
+        System.out.println("x >= 2 = " + (x >= 2));
+        System.out.println("x <= 2 = " + (x <= 2));
+        System.out.println("x < 2 = " + (x < 2));
+        System.out.println("x > 2 = " + (x > 2));
+        System.out.println("//////////////////////////////////////////");
+        x = rand.nextInt(5);
+        y = rand.nextInt(4);
+        z = rand.nextInt(2);
+        System.out.printf("Random x = %d  Random y = %d  Random z = %d\n",x,y,z);
+        System.out.println("x == y || y >= z  = " + (x == y || y >= z));
+        System.out.println("x <= z || y >= z  = " + (x <= z || y >= z));
+        System.out.println("x != z || y != z  = " + (x != z || y != z));
+        System.out.println("x != z || y == z  = " + (x != z || y == z));
+        System.out.println("x != z || y == z  && x != z = " + (x != z || y == z && x != z));
+        System.out.println("x != z || y == z  && x == z = " + (x != z || y == z && x == z));
+        System.out.println("x != z || y == z  && x <= z = " + (x != z || y == z && x <= z));
+        System.out.println("x != z || y == z  && x >= z = " + (x != z || y == z && x >= z));
+        System.out.println("x != z || y == z  && x >= z && y == z = " + (x != z || y == z && x >= z && y == z));
+        System.out.println("x != z || y == z  && x >= z && y != z = " + (x != z || y == z && x >= z && y != z));
+        System.out.println("x != z || y == z  && x != z && y != z = " + (x != z || y == z && x != z && y != z));
+        System.out.println("(x != z || y == z)  && x >= z && y == z = " + ((x != z || y == z) && x >= z && y == z));
+        System.out.println("(x != z || y == z)  && x >= z && y != z = " + ((x != z || y == z) && x >= z && y != z));
+        System.out.println("(x != z || y == z)  && x != z && y != z = " + ((x != z || y == z) && x != z && y != z));
 
 
     }
