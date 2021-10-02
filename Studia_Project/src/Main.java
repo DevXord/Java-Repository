@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) {
 
         /*   zad.1 zadeklaruj i zainicjalizuj zmienne różnych typów i wyświetl w konsoli (im więcej tym lepiej ;) ) */
-        String str ="";
+        String str ="tested";
         int inter=1;
         short shorter = 1234;
         long longer = 1234567890;
@@ -33,6 +33,7 @@ public class Main {
         var doblvar = 1.2;
         var boolwar = true;
 
+        System.out.println("String:" + str);
         System.out.printf("Int: %d, Short: %d, Long: %d, char: %s, byte: %d, boolen: %s \n",inter,shorter,longer,cha,byt,bool);
         System.out.printf("Double: %f, Float: %f, var str: %s, var int: %d, var double: %f, var boolen: %s\n\n",dob,floa,stra,interva,doblvar,boolwar);
 
